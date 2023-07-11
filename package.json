@@ -1,7 +1,7 @@
 {
-  "name": "personal-page",
+  "name": "IamFrancesco",
   "version": "0.1.0",
-  "homepage": "https://Francesco99020.github.io/Personal-Page",
+  "homepage": "http://Francesco99020.github.io/IamFrancesco",
   "private": true,
   "dependencies": {
     "@pdftron/webviewer": "^8.11.0",
