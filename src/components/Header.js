@@ -5,7 +5,6 @@ function Header(){
     const scrollToAboutSection = () => {
         const element = document.getElementById('about');
         if (element) {
-          // 👇 Will scroll smoothly to the top of the next section
           element.scrollIntoView({ behavior: 'smooth' });
         }
       };
@@ -13,7 +12,6 @@ function Header(){
       const scrollToJavaScriptProjectSection = () => {
         const element = document.getElementById('JavaScriptProjects');
         if (element) {
-          // 👇 Will scroll smoothly to the top of the next section
           element.scrollIntoView({ behavior: 'smooth' });
         }
       };
@@ -21,7 +19,6 @@ function Header(){
       const scrollToUnityProjectSection = () => {
         const element = document.getElementById('UnityProjects');
         if (element) {
-          // 👇 Will scroll smoothly to the top of the next section
           element.scrollIntoView({ behavior: 'smooth' });
         }
       };
@@ -29,7 +26,6 @@ function Header(){
       const scrollContactsSection = () => {
         const element = document.getElementById('Contacts');
         if (element) {
-          // 👇 Will scroll smoothly to the top of the next section
           element.scrollIntoView({ behavior: 'smooth' });
         }
       };

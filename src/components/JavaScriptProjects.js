@@ -21,7 +21,7 @@ function JavaScriptProjects(){
     return(
         <div id='JavaScriptProjects'>
             <h1 className="JavaScriptProjects-Section-Header">My JavaScript Projects</h1>
-            <h2 className="JavaScriptProjects-Section-Subheader">Here you can view my javascript projects, many of these projects were created to help grow my understanding of the language as well as put my knowledge to the test.</h2>
+            <h2 className="JavaScriptProjects-Section-Subheader">Here you can view some of my javascript projects, many of these projects were created to help grow my understanding of the language as well as put my knowledge to the test. (Note: This is not an exaustive list of all my projects. Many prototypes I have made haven't made it to GitHub.)</h2>
             <div className="Card-Tray">
                 {LoadJavaScriptProjectCards}
             </div>

@@ -7,7 +7,6 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import UnityProjects from "./components/UnityProjects";
 import JavaScriptProjects from "./components/JavaScriptProjects";
-//import Resume from "./components/Resume";
 import './index.css';
 
 function Page(){

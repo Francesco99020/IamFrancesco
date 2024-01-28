@@ -22,12 +22,12 @@ import excel from '../images/icons8-microsoft-excel-48.png';
 import unity from '../images/icons8-unity-48.png';
 
 const WebDevelopmentData = [
-    { bgcolor: "#F09601", percentComplete: 60, experience: '(HTML) 3 Years', image: html5, showProgress: true, imageClasses: 'd-block' },
-    { bgcolor: "#34BDEC", percentComplete: 60, experience: '(CSS) 3 Years', image: css3, showProgress: true, imageClasses: 'd-block' },
-    { bgcolor: "#F7DF1E", percentComplete: 60, experience: '(JavaScript) 3 Years', image: javascript, showProgress: true, imageClasses: 'd-block'  },
+    { bgcolor: "#F09601", percentComplete: 80, experience: '(HTML) 4 Years', image: html5, showProgress: true, imageClasses: 'd-block' },
+    { bgcolor: "#34BDEC", percentComplete: 80, experience: '(CSS) 4 Years', image: css3, showProgress: true, imageClasses: 'd-block' },
+    { bgcolor: "#F7DF1E", percentComplete: 80, experience: '(JavaScript) 4 Years', image: javascript, showProgress: true, imageClasses: 'd-block'  },
     { bgcolor: "#135795", percentComplete: 30, experience: '(TypeScipt) 1 Year', image: typescript, showProgress: true, imageClasses: 'd-block'  },
     { bgcolor: "#80DEEA", percentComplete: 30, experience: '(React) 1 Year', image: reactNative, showProgress: true, imageClasses: 'd-block'  },
-    { bgcolor: "#21A366", percentComplete: 40, experience: '(Node JS) 2 Years', image: nodejs, showProgress: true, imageClasses: 'd-block'  },
+    { bgcolor: "#21A366", percentComplete: 60, experience: '(Node JS) 3 Years', image: nodejs, showProgress: true, imageClasses: 'd-block'  },
   ];
 
   const GameDevelopmentData = [
@@ -51,7 +51,7 @@ const WebDevelopmentData = [
 
   const DataBaseData = [
     {bgcolor: "#E48805", percentComplete: 60, experience: '(MySql) 3 Years', image: mysql },
-    {bgcolor: "#4CAF50", percentComplete: 20, experience: '(MongoDb) 1 Years', image: mongodb },
+    {bgcolor: "#4CAF50", percentComplete: 60, experience: '(MongoDb) 3 Years', image: mongodb },
     {bgcolor: "#9ECBDB", percentComplete: 20, experience: '(PostGras) 1 Years', image: postgras },
     {bgcolor: "#C4939C", percentComplete: 20, experience: '(DBeaver) 1 Years', image: dbeaver }
   ];
@@ -114,15 +114,15 @@ function About(){
     return(
         <div id='about' className="About-Container">
             <div className='My-Advertizing'>
-                <h1>I am an extremely dedicated programmer who loves to work on all web and Video Game development aspects. I'm your guy if you are looking for a Developer to help with all parts of your project.</h1>
+                <h1>I am an extremely dedicated programmer who loves to work on all web, software and Video Game development aspects. I'm your guy if you are looking for a Developer to help with all parts of your project.</h1>
             </div>
             <div className="About-Me">
                 <h1 className="About-heading-1">About Me</h1>
                 <p className="About-p-1">I grew up in the small town of Baldwin, located inside NY Long Island.
-                    I Graduated High School from Baldwin Senior High School. I am a senior attending New York Institute of Technology
-                    as a full-time student majoring in Information Technology Systems. Despite what my major suggests, my true passion
+                    I Graduated High School from Baldwin Senior High School. I am a recent graduate from New York Institute of Technology
+                    with a degree in Information Technology Systems. Despite what my major suggests, my true passion
                     is programming, and I spend a great deal of time focusing on expanding my coding knowledge in many fields, Such as 
-                    web development, Video game development, and augmented reality. On the right, you can look at some popular
+                    web/software development and Video game development. On the right, you can look at some popular
                     software I know and check out how long I have used them!
                 </p>
             </div>
