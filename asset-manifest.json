@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/IamFrancesco/static/css/main.4d7582e7.css",
-    "main.js": "/IamFrancesco/static/js/main.c02a937f.js",
+    "main.js": "/IamFrancesco/static/js/main.5ace79a6.js",
     "static/media/DayAtTheRangeIcon.png": "/IamFrancesco/static/media/DayAtTheRangeIcon.e92eba198f1febd1af77.png",
     "static/media/Transparent_Profile_pic.png": "/IamFrancesco/static/media/Transparent_Profile_pic.98364e047dcb16b7f9de.png",
     "static/media/MockBosePageImage.png": "/IamFrancesco/static/media/MockBosePageImage.3d81c883f6853409aa62.png",
@@ -11,10 +11,10 @@
     "static/media/ChessGameImage.png": "/IamFrancesco/static/media/ChessGameImage.576e76e10b530bb9d537.png",
     "index.html": "/IamFrancesco/index.html",
     "main.4d7582e7.css.map": "/IamFrancesco/static/css/main.4d7582e7.css.map",
-    "main.c02a937f.js.map": "/IamFrancesco/static/js/main.c02a937f.js.map"
+    "main.5ace79a6.js.map": "/IamFrancesco/static/js/main.5ace79a6.js.map"
   },
   "entrypoints": [
     "static/css/main.4d7582e7.css",
-    "static/js/main.c02a937f.js"
+    "static/js/main.5ace79a6.js"
   ]
 }
