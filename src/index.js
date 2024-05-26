@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProjectDetails from './components/ProjectDetails';
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import Header from "./components/Header";
@@ -9,8 +11,7 @@ import UnityProjects from "./components/UnityProjects";
 import JavaScriptProjects from "./components/JavaScriptProjects";
 import './index.css';
 
-function Page(){
-    return(
+const MainPage = () => (
     <div className="Page-Container">
         <Header />
         <Home />
@@ -20,6 +21,16 @@ function Page(){
         <Contact />
         <Footer />
     </div>
+);
+
+function Page() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/IamFrancesco" element={<MainPage />} />
+                <Route path="/project-details" element={<ProjectDetails />} />
+            </Routes>
+        </Router>
     );
 }
 
