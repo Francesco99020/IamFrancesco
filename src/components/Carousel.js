@@ -1,48 +1,40 @@
 import React, { useState } from 'react';
-import '../index.css';
 
-const Carousel = ({ photos }) => {
-  const [slideIndex, setSlideIndex] = useState(1);
+function Carousel({ mediaItems }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-  const showSlides = (n) => {
-    let newIndex = slideIndex + n;
-    if (newIndex > photos.length) {
-      newIndex = 1;
-    } else if (newIndex < 1) {
-      newIndex = photos.length;
-    }
-    setSlideIndex(newIndex);
-  };
+    const nextSlide = () => {
+        setCurrentIndex((currentIndex + 1) % mediaItems.length);
+    };
 
-  const currentSlide = (n) => {
-    setSlideIndex(n);
-  };
+    const prevSlide = () => {
+        setCurrentIndex((currentIndex - 1 + mediaItems.length) % mediaItems.length);
+    };
 
-  return (
-    <div className="slideshow-container">
-      {photos.map((photo, index) => (
-        <div
-          className={`mySlides fade ${slideIndex === index + 1 ? 'active' : ''}`}
-          key={index}
-          style={{ display: slideIndex === index + 1 ? 'block' : 'none' }}
-        >
-          <div className="numbertext">{index + 1} / {photos.length}</div>
-          <img src={photo} style={{ width: "100%" }} alt={`Slide ${index + 1}`} />
+    const currentMediaItem = mediaItems[currentIndex];
+
+    return (
+        <div className="slideshow-container">
+            {currentMediaItem.type === 'image' ? (
+                <img className="mySlides" src={currentMediaItem.url} alt={`Media ${currentIndex + 1}`} />
+            ) : (
+                <video className="mySlides" src={currentMediaItem.url} controls muted autoPlay loop />
+            )}
+
+            <a className="prev" onClick={prevSlide}>&#10094;</a>
+            <a className="next" onClick={nextSlide}>&#10095;</a>
+
+            <div style={{ textAlign: 'center' }}>
+                {mediaItems.map((_, index) => (
+                    <span
+                        key={index}
+                        className={`dot ${index === currentIndex ? 'active' : ''}`}
+                        onClick={() => setCurrentIndex(index)}
+                    ></span>
+                ))}
+            </div>
         </div>
-      ))}
-      <a className="prev" onClick={() => showSlides(-1)}>&#10094;</a>
-      <a className="next" onClick={() => showSlides(1)}>&#10095;</a>
-      <div style={{ textAlign: "center" }}>
-        {photos.map((_, index) => (
-          <span
-            className={`dot ${slideIndex === index + 1 ? 'active' : ''}`}
-            key={index}
-            onClick={() => currentSlide(index + 1)}
-          ></span>
-        ))}
-      </div>
-    </div>
-  );
-};
+    );
+}
 
 export default Carousel;

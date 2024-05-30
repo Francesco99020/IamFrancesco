@@ -20,6 +20,7 @@ header{
     flex-wrap: wrap;
     text-align: center;
     height: 65px;
+    width: 100vw;
     background-image: linear-gradient(to left, #3f3b3b, black);
 }
 
@@ -193,28 +194,61 @@ h4, h3{
     height: 420px;
 }
 
-.Card-Tray{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #201a1a;
+.Card-Tray {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px; 
+    background-color: black;
+    position: relative;
 }
 
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-    min-height: 10%;
-    max-height: 10%;
-    justify-content: center;
-    background-color: #464040;
-    margin-bottom: 2%;
-    margin: 2%;
+.card-container {
+    width: 90%;
+    height: fit-content;
+    background-color: #201a1a;
+    transform: translate3d(0px, 0px, 0px) scale3d(0.85, 0.85, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
+
+.card-container.in-view {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.card-container:nth-child(2n + 1) {
+    margin-top: 75px; 
+    margin-left: 10%;
+}
+
+.card-container:nth-child(2n) {
+    margin-top: -20px;
+    margin-bottom: 75px;
+}
+
+.card-container:last-child:nth-child(2n + 1) {
+    width: 44%;
+    margin-top: 0;
+    grid-column: 1 / -1;
+    margin-top: -20px; 
+    justify-self: end; 
+    margin-right: 5%;
+    vertical-align: top;
+    margin-bottom: 5%
+}
+
+.card-container:nth-child(2){
+    margin-top: 5%;
+}
+
+
 
 .card-preview-container{
-    margin-top: 20px;
-    width: 90%;
+    margin-top: 0;
+    width: 100%;
     height: fit-content;
     overflow: hidden;
 }
@@ -225,8 +259,12 @@ h4, h3{
     object-fit: cover;
 }
 
-.card-container:hover .card-preview {
-    transform: scale(1.1);
+.card-container:hover {
+    .card-preview {transform: scale(1.1);}
+    .card-title {
+        transition: 0.3s ease-in; 
+        color: #6eccff; 
+    }
 }
 
 .card-buttons:hover {
@@ -241,26 +279,28 @@ h4, h3{
 
 
 .card-details{
-    margin-top: 5%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .card-title{
-    color: white;
+    transition: 0.3s ease-in;
+    color: rgb(167, 167, 167);
     width: 90%;
 }
 
 .card-description{
-    color: white;
+    color: rgb(167, 167, 167);
     width: 90%;
     font-size: 20px;
+    padding-bottom: 1rem;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .card-buttons{
-    background-color: gray;
+    background-color: rgb(59, 59, 59);
     cursor: pointer;
     width: 50%;
     display: flex;
@@ -389,6 +429,7 @@ footer{
     margin-top: 2%;
     padding-top: 1%;
     padding-bottom: 1%;
+    width: 100vw;
 }
 
 .footer-github-container, .footer-linkedin-container, .footer-instagram-container, .footer-slash-container{
@@ -397,7 +438,7 @@ footer{
 }
 
 .footer-github-container img, .footer-linkedin-container img, .footer-instagram-container img, .footer-slash-container img{
-    width: 100%;
+    width: 60px;
     height: 100%;
     transition: 0.3s ease-in;
 }
@@ -420,12 +461,11 @@ footer{
     cursor: pointer;
 }
 
-
-
 .Social-Media-Links{
     display: flex;
     margin: left;
     width: 20vw;
+    height: min-content;
     justify-content: space-around;
 }
 
@@ -503,36 +543,49 @@ footer{
     background-color: #464040;
 }
 
-
-
-
-
-
 .project-details-header h1{
     text-decoration: solid underline;
 }
 
+.project-details-footer {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
 
-/*-----------------Carosul---------------------------------*/
+.project-details-footer button {
+    margin: 0 auto;
+    display: block;
+    background-color: #201a1a;
+    color: #ccc;
+    border: #717171 solid 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+    margin-bottom: 10px;
+}
+
+.project-details-footer button:hover {
+    transition: ease-in 0.3s;
+    background-color: #464040;
+}
+
+/*-----------------Carousel---------------------------------*/
 .slideshow-container {
     width: 100%;
     height: auto;
     position: relative;
     z-index: 1;
-    border-top: 5px black solid;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  .mySlides.active {
+}
+
+.mySlides {
     display: block;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
+    width: 100%;
+    height: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -543,33 +596,26 @@ footer{
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
+}
+
+.prev {
+    left: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
     color: white;
-  }
-  
-  /* Number text (1/6 etc) */
-  .numbertext {
-    color: black;
-    font-size: 20px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
+}
+
+/* The dots/bullets/indicators */
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -578,20 +624,20 @@ footer{
     display: inline-block;
     transition: background-color 0.6s ease;
     margin-bottom: 40px;
-  }
-  
-  .active, .dot:hover {
+}
+
+.active, .dot:hover {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+/* Fading animation */
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
+}
+
+@keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+}
   

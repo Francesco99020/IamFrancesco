@@ -19,7 +19,7 @@ const MainPage = () => (
         <JavaScriptProjects />
         <UnityProjects />
         <Contact />
-        <Footer />
+        <Footer /> 
     </div>
 );
 
