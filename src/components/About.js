@@ -118,12 +118,7 @@ function About(){
             </div>
             <div className="About-Me">
                 <h1 className="About-heading-1">About Me</h1>
-                <p className="About-p-1">I grew up in the small town of Baldwin, located inside NY Long Island.
-                    I Graduated High School from Baldwin Senior High School. I am a recent graduate from New York Institute of Technology
-                    with a degree in Information Technology Systems. Despite what my major suggests, my true passion
-                    is programming, and I spend a great deal of time focusing on expanding my coding knowledge in many fields, Such as 
-                    web/software development and Video game development. On the right, you can look at some popular
-                    software I know and check out how long I have used them!
+                <p className="About-p-1">I grew up in Baldwin, a small town on Long Island, NY, and graduated from Baldwin Senior High School. Recently, I earned my degree in Information Technology Systems from the New York Institute of Technology. While my major is in IT systems, my true passion lies in programming. I dedicate a significant amount of time to expanding my coding skills in various fields, including web and software development, as well as video game development. On the right, you can see some popular software I'm proficient in and how long I've been using them!
                 </p>
             </div>
             <div className="Experience-container">
