@@ -6,6 +6,7 @@ footer{
     padding-top: 1%;
     padding-bottom: 1%;
     width: 100vw;
+    height: 90px;
 }
 
 .footer-github-container, .footer-linkedin-container, .footer-instagram-container, .footer-slash-container{
@@ -40,12 +41,16 @@ footer{
 .Social-Media-Links{
     display: flex;
     margin: left;
+    margin-top: auto;
+    margin-bottom: auto;
     width: 20vw;
     height: min-content;
     justify-content: space-around;
 }
 
 .GitHub-Source-Code{
+    margin-top: auto;
+    margin-bottom: auto;
     padding-top: 10px;
     margin-right: 40px;
     color: orange;
@@ -60,35 +65,22 @@ footer{
 }
 
 @media screen and (max-width: 530px) {
-
-    .footer-github-container img, .footer-linkedin-container img, .footer-instagram-container img, .footer-slash-container img{
-        width: 48px;
+    footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 
-    .GitHub-Source-Code{
-        margin-right: 30px;
-    }
-}
-
-@media screen and (max-width: 470px) {
-
-    .footer-github-container img, .footer-linkedin-container img, .footer-instagram-container img, .footer-slash-container img{
-        width: 36px;
+    .GitHub-Source-Code {
+        margin-right: 0;
+        margin-bottom: 10px;
+        order: -1;
+        text-align: center;
+        width: 100%;
     }
 
-    .GitHub-Source-Code{
-        margin-right: 20px;
-    }
-}
-
-@media screen and (max-width: 410px) {
-
-    .footer-github-container img, .footer-linkedin-container img, .footer-instagram-container img, .footer-slash-container img{
-        width: 30px;
-    }
-
-    .GitHub-Source-Code{
-        margin-right: 10px;
-        font-size: small;
+    .Social-Media-Links {
+        width: 100%;
+        justify-content: center;
     }
 }
