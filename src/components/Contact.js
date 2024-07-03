@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../stylesheets/contact.css';
 import emailStatic from '../images/email.png';
 import emailGif from '../images/email.gif';
 import phoneStatic from '../images/phone.png';

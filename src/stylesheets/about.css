@@ -1,0 +1,104 @@
+/* Base styles */
+.My-Advertizing {
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.About-heading-1, .About-p-1 {
+    color: white;
+}
+
+.About-heading-1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.About-p-1 {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.highlightedBtn {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    color: white;
+    background-color: purple;
+    cursor: pointer;
+    text-align: center;
+    transition: ease-in 0.3s;
+}
+
+.unhighlightedBtn {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: ease-in 0.3s;
+}
+
+.About-Container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.About-Me {
+    width: 40%;
+    background-color: rgb(28, 25, 25);
+}
+
+.Experience-container {
+    background-color: #3f3b3b;
+    width: 60%;
+    transition: height 1s ease-in-out;
+}
+
+.Experience-progress-container {
+    margin-top: 40px;
+    height: 420px;
+}
+
+.Section-Button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-text{
+    font-size: 1.8vw;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Media query for screens smaller than 600px */
+@media screen and (max-width: 1100px) {
+    .About-Me, .Experience-container {
+        width: 100%;
+    }
+
+    .About-p-1 {
+        font-size: 18px;
+    }
+
+    .highlightedBtn, .unhighlightedBtn {
+        width: 40%;
+    }
+
+    .button-text{
+        font-size: 3vw;
+    }
+}

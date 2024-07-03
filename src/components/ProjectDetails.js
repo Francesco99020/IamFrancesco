@@ -1,4 +1,5 @@
 import React from "react";
+import '../stylesheets/projectDetails.css';
 import { useLocation } from 'react-router-dom';
 import Carousel from './Carousel';
 import Footer from "./Footer";

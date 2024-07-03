@@ -1,4 +1,5 @@
 import React from "react";
+import '../stylesheets/footer.css';
 import instagram from "../images/instagram.png";
 import github from "../images/github.png";
 import linkedin from "../images/linkedin.png";

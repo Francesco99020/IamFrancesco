@@ -1,0 +1,196 @@
+.card-container {
+    width: 90%;
+    height: fit-content;
+    background-color: #201a1a;
+    transform: translate3d(0px, 0px, 0px) scale3d(0.85, 0.85, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.card-container.in-view {
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    opacity: 1;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.card-container:nth-child(2n + 1) {
+    margin-top: 75px; 
+    margin-left: 10%;
+}
+
+.card-container:nth-child(2n) {
+    margin-top: -20px;
+    margin-bottom: 75px;
+}
+
+.card-container:last-child:nth-child(2n + 1) {
+    width: 44%;
+    margin-top: 0;
+    grid-column: 1 / -1;
+    margin-top: -20px; 
+    justify-self: end; 
+    margin-right: 5%;
+    vertical-align: top;
+    margin-bottom: 5%
+}
+
+.card-container:nth-child(2){
+    margin-top: 5%;
+}
+
+.card-container:nth-last-child(2){
+    margin-bottom: 5%;
+}
+
+
+
+.card-preview-container{
+    margin-top: 0;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.card-preview {
+    width: 100%;
+    transition: transform 1s ease-in-out; 
+    object-fit: cover;
+}
+
+.card-container:hover {
+    .card-preview {transform: scale(1.1);}
+    .card-title {
+        transition: 0.3s ease-in; 
+        color: #6eccff; 
+    }
+}
+
+.card-buttons:hover {
+    background-color: rgb(161, 31, 161);
+    transition: ease-in 1s;
+}
+
+.card-button:hover {
+    background-color: rgb(161, 31, 161);
+    transition: ease-in 1s;
+}
+
+
+.card-details{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-title{
+    transition: 0.3s ease-in;
+    color: rgb(167, 167, 167);
+    width: 90%;
+}
+
+.card-description{
+    width: 90%;
+    font-size: 20px;
+    color: rgb(167, 167, 167);
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative; 
+    /* use this value to count block height */
+    line-height: 1.2em;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 3.6em; 
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;
+    
+    /* */
+    padding-right: 1em;
+    margin: 1em;
+  }
+  .card-description:before {
+    /* points in the end */
+    content: '...';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 0;
+    bottom: 0;
+  }
+  .card-description:after {
+    /* points in the end */
+    content: '';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of text */
+    right: 0;
+    width: 1em;
+    /* set width and height */
+    height: 1em;
+    margin-top: 0.2em;
+    background: #201a1a;
+  }
+
+.card-buttons{
+    background-color: rgb(59, 59, 59);
+    cursor: pointer;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-buttons:hover{
+    background-color: rgb(161, 31, 161);
+    transition: ease-in 0.2s;
+}
+
+.card-button:hover{
+    background-color: rgb(161, 31, 161);
+    transition: ease-in 0.2s;
+}
+
+.card-button-text{
+    color: white;
+    margin: auto;
+}
+
+.card-button-github{
+    object-fit: scale-down;
+}
+
+@media screen and (max-width: 615px) {
+    .card-container:nth-child(2n + 1) {
+        margin-top: 0;
+        margin: auto;
+
+    }
+    
+    .card-container:nth-child(2n) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .card-container:last-child:nth-child(2n + 1) {
+        width: 90%;
+        margin-top: 0;
+        grid-column: 1 / -1;
+        margin-top: 0; 
+        justify-self: end; 
+        margin-right: 5%;
+        vertical-align: top;
+        margin-bottom: 5%
+    }
+
+    .card-container:last-child{
+        margin-bottom: 2em;
+    }
+    
+    .card-container:nth-child(2){
+        margin-top: 5%;
+    }
+
+    .card-container:first-child{
+        margin-top: 2em;
+    }
+}

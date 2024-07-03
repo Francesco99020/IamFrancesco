@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../stylesheets/carousel.css';
 
 function Carousel({ mediaItems }) {
     const [currentIndex, setCurrentIndex] = useState(0);

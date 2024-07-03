@@ -1,54 +1,21 @@
 import React from "react";
+import '../stylesheets/progressBar.css';
 
 const ProgressBar = (props) => {
-    const { bgcolor, percentComplete, experience, image } = props;
+  const { bgcolor, percentComplete, experience, image } = props;
 
-    const divStyles = {
-      display: 'flex',
-      marginRight: 0,
-      marginLeft: 10,
-      marginBottom: -60,
-      marginTop: -60
-    }
-
-    const imageStyle = {
-      objectFit: 'scale-down',
-      width: 48
-    }
-  
-    const containerStyles = {
-      height: 20,
-      width: '100%',
-      backgroundColor: "#e0e0de",
-      borderRadius: 50,
-      margin: 50
-    }
-  
-    const fillerStyles = {
-      height: '100%',
-      width: `${percentComplete}%`,
-      backgroundColor: bgcolor,
-      borderRadius: 'inherit',
-      textAlign: 'right',
-      transition: 'width 1s ease-in-out'
-    }
-  
-    const labelStyles = {
-      padding: 5,
-      color: 'white',
-      fontWeight: 'bold'
-    }
-  
-    return (
-      <div style={divStyles}>
-        <img style={imageStyle} src={image} alt="" />
-        <div style={containerStyles}>
-          <div style={fillerStyles}>
-            <span style={labelStyles}>{`${experience}`}</span>
-          </div>
-        </div>
+  return (
+    <div className="progress-bar-container">
+      <img className="progress-bar-image" src={image} alt="" />
+      <div className="progress-bar">
+        <span className="progress-bar-label">{`${experience}`}</span>
+        <div
+          className="progress-bar-filler"
+          style={{ width: `${percentComplete}%`, backgroundColor: bgcolor }}
+        ></div>
       </div>
-    );
-  };
-  
-  export default ProgressBar;
+    </div>
+  );
+};
+
+export default ProgressBar;

@@ -1,5 +1,6 @@
 import React from "react";
 import ProfilePic from '../images/Transparent_Profile_pic.png';
+import '../stylesheets/home.css';
 
 function Home(){
     return(

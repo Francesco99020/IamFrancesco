@@ -1,0 +1,60 @@
+/* ProgressBar.css */
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    margin-left: 10px;
+    margin-bottom: -60px;
+    margin-top: -60px;
+    position: relative; /* Reference for absolute positioning */
+  }
+  
+  .progress-bar-image {
+    object-fit: scale-down;
+    width: 48px;
+    margin-right: 10px; /* Spacing between the image and the progress bar */
+  }
+  
+  .progress-bar {
+    height: 20px;
+    width: 100%;
+    background-color: #e0e0de;
+    border-radius: 50px;
+    margin: 50px;
+    position: relative; /* Reference for absolute positioning */
+  }
+  
+  .progress-bar-filler {
+    height: 100%;
+    width: 0; /* Initial width, will be set dynamically */
+    background-color: inherit; /* Will be set dynamically */
+    border-radius: inherit;
+    text-align: right;
+    transition: width 1s ease-in-out;
+  }
+  
+  .progress-bar-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    inline-size: 100%;
+    text-align: center;
+  }
+
+@media screen and (max-width: 650px) {
+    .progress-bar-label{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .progress-bar-label{
+        font-size: 4vw;
+    }
+}
+  

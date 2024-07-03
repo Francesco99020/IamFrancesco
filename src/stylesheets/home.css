@@ -1,0 +1,79 @@
+/* Base styles */
+.background-image {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    height: 40vh;
+    object-fit: repeat;
+}
+
+.Main-Body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Add relative positioning to the container */
+}
+
+.ProfilePic {
+    align-self: flex-end;
+    display: block;
+    width: auto;
+    height: 90%;
+    margin-left: 10%;
+    margin-bottom: 0;
+}
+
+.Body-Title {
+    margin-left: auto;
+    width: 1000px;
+}
+
+.Main-Text, .Main-Sentence {
+    color: white;
+}
+
+.Main-Secondary-Text {
+    color: gray;
+}
+
+.Main-Text, .Main-Secondary-Text {
+    font-size: 60px;
+}
+
+.Main-Body {
+    background-image: url("../images/Dark-Background.png");
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+}
+
+/* Media query for screens smaller than 1100px */
+@media screen and (max-width: 1100px) {
+    .Main-Body {
+        flex-direction: column; /* Change the flex direction to column */
+        justify-content: flex-end; /* Ensure children are aligned to the bottom */
+    }
+
+    .Main-Text, .Main-Secondary-Text {
+        font-size: 7vw;
+    }
+
+    .Body-Title {
+        position: absolute; /* Make the title position absolute */
+        top: 10%; /* Adjust the top position as needed */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center horizontally */
+        width: 80%; /* Adjust width as needed */
+        text-align: center; /* Center the text */
+        z-index: 10; /* Ensure it appears above the profile picture */
+    }
+
+    .ProfilePic {
+        align-self: flex-end; /* Ensure the profile picture is at the bottom */
+        height: 50%; /* Adjust height */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0; /* Add some margin below the profile picture */
+    }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import github from '../images/icons8-github-48.png';
 import useInView from './useInView';
+import '../stylesheets/projectCards.css';
 
 function ProjectCard(props) {
     const { image, title, description, githubRepo, appLink, ProjectDetails } = props;

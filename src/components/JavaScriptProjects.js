@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import JavaScriptProjectData from './JavaScriptProjectData'; // Import the project data
+import '../stylesheets/javascriptProjects.css';
 
 function JavaScriptProjects() {
     const LoadJavaScriptProjectCards = JavaScriptProjectData.map(x => {

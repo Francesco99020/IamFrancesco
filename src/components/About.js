@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../stylesheets/about.css';
 import ProgressBar from "./progress-bar.component";
 import cSharp from '../images/icons8-c-sharp-logo-48.png';
 import css3 from '../images/icons8-css3-48.png';
